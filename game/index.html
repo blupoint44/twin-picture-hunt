@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Picture Hunt — The Lighthouse Cove</title>
+<style>
+  body { margin: 0; background: #17102a; color: #f4e9d8; font-family: Georgia, 'Times New Roman', serif; text-align: center; }
+  header { padding: 14px 8px 4px; }
+  h1 { margin: 0; font-size: 30px; letter-spacing: 1px; color: #ffe9a8; }
+  p.how { margin: 6px 0 10px; font-size: 16px; color: #cfc3e0; }
+  .hud { display: flex; gap: 26px; justify-content: center; align-items: center; font-size: 19px; margin-bottom: 10px; }
+  .hud strong { color: #37e08b; }
+  button { font: inherit; font-size: 15px; background: #2e2150; color: #ffe9a8; border: 2px solid #ffe9a8; border-radius: 8px; padding: 4px 14px; cursor: pointer; }
+  canvas { max-width: 96vw; height: auto; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.55); touch-action: manipulation; }
+  #banner { min-height: 26px; font-size: 20px; color: #ffe9a8; margin-top: 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Twin Picture Hunt</h1>
+  <p class="how">The lighthouse cove at dusk, drawn twice — with 7 sneaky differences. Click or tap a difference in either picture to mark it on both. Keys: <b>R</b> restart, <b>H</b> hint.</p>
+</header>
+<div class="hud">
+  <strong id="counter">7 to find</strong>
+  <span id="misses">Misses: 0</span>
+  <span id="time">Time: 00:00</span>
+  <button id="hint" type="button">Hint (H)</button>
+  <button id="restart" type="button">Restart (R)</button>
+</div>
+<canvas id="stage" width="1064" height="440"></canvas>
+<div id="banner"></div>
+<script type="module" src="./src/game.js"></script>
+</body>
+</html>
